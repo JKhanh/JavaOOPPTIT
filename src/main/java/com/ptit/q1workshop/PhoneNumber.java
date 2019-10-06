@@ -12,9 +12,9 @@ package com.ptit.q1workshop;
  */
 public class PhoneNumber {
     private int maVung;
-    private int sDT;
+    private String sDT;
 
-    public PhoneNumber(int maVung, int sDT) {
+    public PhoneNumber(int maVung, String sDT) {
         this.maVung = maVung;
         this.sDT = sDT;
     }
@@ -30,11 +30,11 @@ public class PhoneNumber {
         this.maVung = maVung;
     }
 
-    public int getsDT() {
+    public String getsDT() {
         return sDT;
     }
 
-    public void setsDT(int sDT) {
+    public void setsDT(String sDT) {
         this.sDT = sDT;
     }
 

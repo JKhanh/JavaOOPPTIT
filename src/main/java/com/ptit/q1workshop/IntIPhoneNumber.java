@@ -15,7 +15,7 @@ public class IntIPhoneNumber extends PhoneNumber {
     public IntIPhoneNumber() {
     }
     
-    public IntIPhoneNumber(int maVung, int sDT, int maQuocGia){
+    public IntIPhoneNumber(int maVung, String sDT, int maQuocGia){
         super(maVung, sDT);
         this.maQuocGia = maQuocGia; 
     }

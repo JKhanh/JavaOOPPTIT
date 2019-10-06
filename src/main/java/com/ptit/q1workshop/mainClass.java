@@ -25,6 +25,7 @@ public class mainClass {
             System.out.println("3.Liet ke sdt.");
             System.out.println("4.Tinh tong sdt theo tung vung.");
             System.out.println("5.Tim kiem theo co duoi.");
+            System.out.println("0.Thoat.");
             System.out.print("Nhap lua chon: ");
             int choose = input.nextInt();
             input.nextLine();
@@ -46,15 +47,13 @@ public class mainClass {
                             }
                             int space = sdt.indexOf('-');
                             int maVung = Integer.parseInt(sdt.substring(1,space));
-                            int so = Integer.parseInt(sdt.substring(space+1));
+                            String so = sdt.substring(space+1);
                             phoneSet.add(new PhoneNumber(maVung, so));
                             if(phoneMap.containsKey(maVung)) {
                                 int soMV = (int)phoneMap.get(maVung);
-                                System.out.println("add more");
                                 phoneMap.put(maVung, soMV+1);
                             }
                             else{ 
-                                System.out.println("add new");
                                 phoneMap.put(maVung, 1);
                             }
                             break;
@@ -69,7 +68,7 @@ public class mainClass {
                             int maQG = Integer.parseInt(sdt.substring(0,2));
                             space = sdt.lastIndexOf('-');
                             maVung = Integer.parseInt(sdt.substring(3,space));
-                            so = Integer.parseInt(sdt.substring(space+1));
+                            so = sdt.substring(space+1);
                             System.out.println(maQG + " " + maVung + " " + so);
                             InphoneSet.add(new IntIPhoneNumber(maVung, so, maQG));
                             if(phoneMap.containsKey(maVung)) {
